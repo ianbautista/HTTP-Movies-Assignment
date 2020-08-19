@@ -39,7 +39,7 @@ export default function MovieUpdate(props) {
 			.then((response) => {
 				console.log(response);
 				props.getMovieList();
-				history.push(`/movies/${id}`);
+				history.push(`/`);
 			})
 			.catch((error) => {
 				console.log(error);
