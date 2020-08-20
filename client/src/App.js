@@ -28,6 +28,10 @@ const App = () => {
 
 	return (
 		<>
+			<img
+				src="https://clipartion.com/wp-content/uploads/2015/11/image-gallery-for-family-movie-clipart-1024x524.png"
+				alt="movie reel"
+			/>
 			<SavedList list={savedList} />
 
 			<Route exact path="/">
