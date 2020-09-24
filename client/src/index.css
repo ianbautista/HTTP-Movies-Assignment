@@ -1,19 +1,41 @@
+* {
+  text-decoration: none;
+  color: unset;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #f2f2f2;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#root img {
+  width: 20vw;
+  text-align: center;
 }
 
 .movie-card {
   background-color: #fff;
-  border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgb(255, 255, 255),
+  0 2px 4px rgba(0, 0, 0, 0.24);
   padding: 1rem;
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
+  width: 70vw;
+  border: 0;
+  border-radius: 15px;
+  background-color: #3f3f3f;
+  color: #fff;
 }
 
 .movie-director {
@@ -36,8 +58,14 @@ body {
   justify-content: space-between;
 }
 
+.nav {
+  display: flex;
+  margin: 1%;
+}
+
 .saved-list h3 {
   margin-right: 10px;
+  display: flex;
 }
 
 .saved-movie {
@@ -53,25 +81,64 @@ body {
   width: 75%;
   margin: 1rem auto;
 }
-.save-button {
-  position: absolute;
-  top: 25px;
-  right: 25px;
+
+.save-button, .edit-button, .delete-button, .nav-button {
   border: 1px solid grey;
   padding: 5px 10px;
-  background-color: lightseagreen;
-}
-.save-button:hover {
-  background-color: green;
+  background-color: crimson;
   color: white;
+  border-radius: 10px;
 }
 
-.home-button {
-  padding: 5px 10px;
-  background-color: lightskyblue;
+.save-button {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+}
+
+.edit-button {
+  position: absolute;
+  top: 80px;
+  right: 50px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 120px;
+  right: 50px;
+}
+
+
+.save-button:hover, .edit-button:hover, .delete-button:hover  {
+  background-color: white;
+  color: crimson;
+}
+
+.home-button, .add-movie-button {
+  padding: 5px 5px;
+  margin: 1%;
+  width: 80px;
+  text-align: center;
+
+  border: 1px solid grey;
+  background-color: crimson;
+  color: white;
+  border-radius: 10px;
 }
 
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+form {
+  color: white;
+}
+
+button {
+  color: black;
+}
+
+input {
+  color: black;
 }
